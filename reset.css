@@ -1,0 +1,47 @@
+css
+
+/* 1. Глобальный border-box для удобного расчета размеров */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 2. Убираем внешние отступы у всех базовых элементов */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 3. Настройки для body: плавный скролл и базовая высота */
+html,
+body {
+    height: 100%;
+    
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    /* Сглаживание шрифтов на macOS */
+}
+
+/* 4. Удобная работа с медиа-файлами (делает их отзывчивыми) */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    transition: transform .4s;
+}
+
+
+
