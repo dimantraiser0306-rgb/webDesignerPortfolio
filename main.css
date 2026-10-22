@@ -17,6 +17,9 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .header_box {
@@ -24,6 +27,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    max-width: 620px;
     width: 100%;
     position: relative;
     margin: 0 auto;
@@ -171,7 +175,9 @@ a:hover {
 /*blocks*/
 
 .blocks_wrap {
-    margin-top: 80px;
+    box-sizing: border-box;
+    padding: 0 10px;
+    margin-top: clamp(20px, 1.3svw, 80px);
 }
 
 .blocks {
@@ -186,7 +192,7 @@ a:hover {
     display: flex;
     justify-content: center;
     width: 220px;
-    height: 160px;
+    /* height: 160px; */
     flex-direction: column;
     background-color: rgba(218, 197, 167, 0.05);
     color: #dac5a7;
@@ -278,7 +284,7 @@ a:hover {
 
 .selected_gadget img {
     width: 100%;
-    height: auto;
+    /* height: auto; */
     display: block;
 }
 
@@ -291,11 +297,15 @@ a:hover {
 }
 
 .gadget_block-wrap {
+    box-sizing: border-box;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 600px;
+    max-width: 600px;
+    width: 100%;
     margin-bottom: 15px;
+    margin-top: 15px;
+    padding: 0 10px;
 }
 
 .gadget_block-name span {
@@ -324,7 +334,7 @@ a:hover {
 
 .header .img {
     margin-bottom: 16px;
-    width: 500px;
+    max-width: 500px;
 }
 
 .description_blocks {
@@ -342,7 +352,6 @@ a:hover {
     justify-content: center;
     align-items: center;
     /* margin-top: clamp(10px, 48px; */
-    margin-bottom: 112px;
 }
 
 .description .down img {
@@ -355,7 +364,7 @@ a:hover {
     font-size: 10px;
     margin-left: auto;
     margin-right: 180px;
-    padding-left: 40px;
+    padding: 20px;
     width: 250px;
     height: auto;
 }
@@ -409,6 +418,12 @@ a:hover {
     margin-top: -20px;
 }
 
+.comment_img-text {
+    max-width: 384px;
+    width: 100%;
+    padding: 0 10px;
+}
+
 .comments_wrap {
     display: flex;
     justify-content: center;
@@ -435,12 +450,13 @@ a:hover {
 .comments_block1 {
     display: flex;
     flex-direction: row;
+    width: 100%;
 }
 
 .comments_block {
     font-size: 15px;
-    width: 350px;
-    height: 240px;
+    max-width: 350px;
+    width: 100%;
 }
 
 .comments_creator {
@@ -466,6 +482,8 @@ a:hover {
     justify-content: center;
     gap: 20px;
     flex-direction: row;
+    width: fit-content;
+    margin: 0 auto;
 }
 
 .comments_comments_wrap-block {
@@ -631,7 +649,7 @@ a:hover {
         width: 100%;
     }
     .img img {
-        width: 350px;
+        width: fit-content;
         margin: 0 auto;
     }
     .footer_bottom-content {
@@ -675,5 +693,14 @@ a:hover {
         display: flex;
         align-items: center;
         flex-direction: column;
+        max-width: fit-content;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 429px) {
+    .footer_bottom-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
